@@ -3,9 +3,14 @@
  */
 package org.eclipse.testgit.shared.services;
 
+import java.util.Date;
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import org.eclipse.scout.rt.shared.data.form.AbstractFormData;
+import org.eclipse.scout.rt.shared.data.form.ValidationRule;
+import org.eclipse.scout.rt.shared.data.form.fields.AbstractValueFieldData;
 
 /**
  * <b>NOTE:</b><br>
@@ -19,5 +24,38 @@ public class DesktopFormData extends AbstractFormData {
   private static final long serialVersionUID = 1L;
 
   public DesktopFormData() {
+  }
+
+  public Datum getDatum() {
+    return getFieldByClass(Datum.class);
+  }
+
+  public Testinput getTestinput() {
+    return getFieldByClass(Testinput.class);
+  }
+
+  public static class Datum extends AbstractValueFieldData<Date> {
+
+    private static final long serialVersionUID = 1L;
+
+    public Datum() {
+    }
+  }
+
+  public static class Testinput extends AbstractValueFieldData<String> {
+
+    private static final long serialVersionUID = 1L;
+
+    public Testinput() {
+    }
+
+    /**
+     * list of derived validation rules.
+     */
+    @Override
+    protected void initValidationRules(Map<String, Object> ruleMap) {
+      super.initValidationRules(ruleMap);
+      ruleMap.put(ValidationRule.MAX_LENGTH, 4000);
+    }
   }
 }
