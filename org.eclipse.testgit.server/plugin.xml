@@ -24,6 +24,11 @@
             class="org.eclipse.testgit.server.services.DesktopService"
             session="org.eclipse.testgit.server.ServerSession">
       </service>
+      <service
+            factory="org.eclipse.scout.rt.server.services.ServerServiceFactory"
+            class="org.eclipse.testgit.server.services.lookup.testLookupService"
+            session="org.eclipse.testgit.server.ServerSession">
+      </service>
    </extension>
    <extension
          name=""
@@ -94,8 +99,8 @@
          name=""
          point="org.eclipse.core.runtime.products">
       <product
-            application="org.eclipse.testgit.server.app"
-            name="testgit Server">
+            name="testgit Server"
+            application="org.eclipse.testgit.server.app">
          <property
                name="appName"
                value="testgit Server">

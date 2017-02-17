@@ -6,6 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.eclipse.testgit.client.Activator
 Export-Package: org.eclipse.testgit.client,
  org.eclipse.testgit.client.ui.desktop,
+ org.eclipse.testgit.client.ui.desktop.outlines,
  org.eclipse.testgit.client.ui.forms
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.scout.rt.client;visibility:=reexport,

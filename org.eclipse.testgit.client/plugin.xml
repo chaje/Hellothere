@@ -8,6 +8,10 @@
             factory="org.eclipse.scout.rt.client.services.ClientProxyServiceFactory"
             class="org.eclipse.testgit.shared.services.IDesktopService">
       </proxy>
+      <proxy
+            factory="org.eclipse.scout.rt.client.services.ClientProxyServiceFactory"
+            class="org.eclipse.testgit.shared.services.lookup.ItestLookupService">
+      </proxy>
    </extension>
 
 </plugin>

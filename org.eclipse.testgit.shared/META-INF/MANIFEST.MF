@@ -6,7 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.eclipse.testgit.shared.Activator
 Export-Package: org.eclipse.testgit.shared,
  org.eclipse.testgit.shared.services,
- org.eclipse.testgit.shared.services.common.text
+ org.eclipse.testgit.shared.services.common.text,
+ org.eclipse.testgit.shared.services.lookup
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.scout.rt.shared;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

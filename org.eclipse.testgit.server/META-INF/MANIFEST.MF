@@ -7,7 +7,8 @@ Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.testgit.server.Activator
 Export-Package: org.eclipse.testgit.server,
  org.eclipse.testgit.server.services,
- org.eclipse.testgit.server.services.common.security
+ org.eclipse.testgit.server.services.common.security,
+ org.eclipse.testgit.server.services.lookup
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.testgit.shared,
  org.eclipse.scout.rt.server,
