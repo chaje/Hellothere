@@ -30,6 +30,10 @@ public class DesktopFormData extends AbstractFormData {
     return getFieldByClass(Datum.class);
   }
 
+  public Name getName() {
+    return getFieldByClass(Name.class);
+  }
+
   public Testinput getTestinput() {
     return getFieldByClass(Testinput.class);
   }
@@ -39,6 +43,23 @@ public class DesktopFormData extends AbstractFormData {
     private static final long serialVersionUID = 1L;
 
     public Datum() {
+    }
+  }
+
+  public static class Name extends AbstractValueFieldData<String> {
+
+    private static final long serialVersionUID = 1L;
+
+    public Name() {
+    }
+
+    /**
+     * list of derived validation rules.
+     */
+    @Override
+    protected void initValidationRules(Map<String, Object> ruleMap) {
+      super.initValidationRules(ruleMap);
+      ruleMap.put(ValidationRule.MAX_LENGTH, 4000);
     }
   }
 

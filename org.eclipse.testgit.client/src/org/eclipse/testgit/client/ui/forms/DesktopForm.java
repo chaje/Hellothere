@@ -14,6 +14,7 @@ import org.eclipse.scout.rt.client.ui.form.fields.stringfield.AbstractStringFiel
 import org.eclipse.scout.rt.shared.TEXTS;
 import org.eclipse.scout.service.SERVICES;
 import org.eclipse.testgit.client.ui.forms.DesktopForm.MainBox.DatumField;
+import org.eclipse.testgit.client.ui.forms.DesktopForm.MainBox.NameField;
 import org.eclipse.testgit.client.ui.forms.DesktopForm.MainBox.TestinputField;
 import org.eclipse.testgit.shared.Icons;
 import org.eclipse.testgit.shared.services.DesktopFormData;
@@ -74,6 +75,13 @@ public class DesktopForm extends AbstractForm {
   }
 
   /**
+   * @return the NameField
+   */
+  public NameField getNameField(){
+    return getFieldByClass(NameField.class);
+  }
+
+  /**
    * @return the TestinputField
    */
   public TestinputField getTestinputField(){
@@ -103,6 +111,15 @@ public class DesktopForm extends AbstractForm {
       @Override
       protected String getConfiguredLabel() {
         return TEXTS.get("datum");
+      }
+    }
+
+    @Order(3000.0)
+    public class NameField extends AbstractStringField {
+
+      @Override
+      protected String getConfiguredLabel() {
+        return TEXTS.get("Name");
       }
     }
   }
