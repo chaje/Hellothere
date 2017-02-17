@@ -96,6 +96,11 @@ public class DesktopForm extends AbstractForm {
     public class DatumField extends AbstractDateField {
 
       @Override
+      protected String getConfiguredFormat() {
+        return "MM/dd/yy";
+      }
+
+      @Override
       protected String getConfiguredLabel() {
         return TEXTS.get("datum");
       }
