@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.testgit.shared
+Bundle-SymbolicName: org.eclipse.testgit.shared;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.eclipse.testgit.shared.Activator
+Export-Package: org.eclipse.testgit.shared,
+ org.eclipse.testgit.shared.services,
+ org.eclipse.testgit.shared.services.common.text
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.scout.rt.shared;visibility:=reexport
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

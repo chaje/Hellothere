@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.testgit.client
+Bundle-SymbolicName: org.eclipse.testgit.client;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.eclipse.testgit.client.Activator
+Export-Package: org.eclipse.testgit.client,
+ org.eclipse.testgit.client.ui.desktop,
+ org.eclipse.testgit.client.ui.forms
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.scout.rt.client;visibility:=reexport,
+ org.eclipse.scout.rt.extension.client;visibility:=reexport,
+ org.eclipse.testgit.shared,
+ org.eclipse.scout.svg.client
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.w3c.dom.svg;version="[1.1.0,2.0.0)"
+Bundle-ActivationPolicy: lazy
